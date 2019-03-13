@@ -1,7 +1,7 @@
 var cells = []
 var cant = 16
 var s;
-var minas = 40
+var minas = 2
 var qeue = []
 var cellsClicked = 0
 var minesLeft = minas
