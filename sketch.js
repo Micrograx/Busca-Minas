@@ -19,7 +19,7 @@ function setup() {
     minas = (parseInt(params.minas))
   } 
   if (params.size) {
-    cant = params.size
+    cant = parseInt(params.size)
   }
   
   for (var j = 0; j < cant; j++) { // columnas
