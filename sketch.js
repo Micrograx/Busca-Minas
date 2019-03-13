@@ -1,7 +1,7 @@
 var cells = []
 var cant = 16
 var s;
-var minas = 2
+var minas = 40
 var qeue = []
 var cellsClicked = 0
 var minesLeft = minas
@@ -12,6 +12,16 @@ function setup() {
   createCanvas(642, 642)
   s = floor(window.height / cant)
   ai = new robot()
+  
+  
+  params = getURLParams()
+  if (params.minas) {
+    minas = (parseInt(params.minas))
+  } 
+  if (params.size) {
+    cant = params.size
+  }
+  
   for (var j = 0; j < cant; j++) { // columnas
     for (var i = 0; i < cant; i++) { // filas
       cells.push(new cell(j, i, s))
@@ -29,7 +39,8 @@ function setup() {
   for (var i = 0; i < cells.length; i++) {
     cells[i].check(cells)
   }
-
+  
+  
 //  if (auto) cells[0].click()
 
 }
