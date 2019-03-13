@@ -9,8 +9,8 @@ var count = 0
 var auto = true
 
 function setup() {
-  createCanvas(642, 642)
-  s = floor(window.height / cant)
+  createCanvas(900, 900)
+  
   ai = new robot()
   
   
@@ -22,6 +22,7 @@ function setup() {
     cant = parseInt(params.size)
   }
   
+  s = floor(window.height / cant)
   for (var j = 0; j < cant; j++) { // columnas
     for (var i = 0; i < cant; i++) { // filas
       cells.push(new cell(j, i, s))
